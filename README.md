@@ -13,28 +13,32 @@ WarO_COBOL
 ### Viewing Code
 
 * The 'main' program is [here](./src/waro.cbl).
+* The [build script](./src/run_waro.sh) might be informative.
 
 ### Starting Docker
 
-* using [1], download image from docker: `docker pull gregcoleman/docker-cobol`
-* edit folder in `run.sh` as appropriate 
-* to use image: `./run.sh`
+* A prerequisite is Docker (e.g. [Docker Desktop](https://www.docker.com/products/docker-desktop))
+* In Docker terminal, download image [1]: `docker pull gregcoleman/docker-cobol`
+    * this uses GnuCOBOL [3]
+* edit folder in `run.sh` as appropriate for your machine 
+* to start container: `./run.sh`
 
-### Run example 1
+### Run game
 
-* at prompt in image: `cd /data`
-* at prompt in image: `./run_waro.sh`
+* at prompt, in Docker container: `cd /data`
+* at prompt, in Docker container: `./run_waro.sh`
 
 ### Re-starting Docker
 
-* to re-enter image after exiting: `./re-enter.sh`
+* to re-enter container after exiting: `./re-enter.sh`
 
 Rules:
 ---------
 
-Rules are [here](Rules.md).
+Game rules are [here](Rules.md).
 
 ### Resources
 
-* [1] - https://hub.docker.com/r/gregcoleman/docker-cobol/
-* [2] - https://medium.com/@yvanscher/7-cobol-examples-with-explanations-ae1784b4d576
+* [1] - [Docker image](https://hub.docker.com/r/gregcoleman/docker-cobol/)
+* [2] - [tutorial](https://medium.com/@yvanscher/7-cobol-examples-with-explanations-ae1784b4d576)
+* [3] - [GnuCOBOL](https://en.wikipedia.org/wiki/GnuCOBOL)
