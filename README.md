@@ -5,11 +5,11 @@ WarO_COBOL
 * a COBOL submission for War-O as a code exercise
 * This is not a serious venture!
 * With the demand for COBOL during the pandemic, I thought it would be interesting to "kick the tires" a bit. (I took one semester of COBOL, centuries ago).
-* Note
-    - no unit tests (I know there are frameworks but I'm not that invested to configure)
-    - probably not idiomatic
-    - horribly hard-coded to 3 players, mortifyingly magic numbers
-    - stupefyingly simple strategy (all players use 'next card')
+* Caveat Emptor:
+    - No unit tests. There are frameworks and it is painful to work without a harness, but I'm not that invested to configure a framework.
+    - Probably not idiomatic
+    - Horribly hard-coded to 3 players; mortifyingly magic numbers
+    - Stupefyingly simple strategy (all players use 'next card')
 
 ### Viewing Code
 
