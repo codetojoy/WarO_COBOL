@@ -4,6 +4,7 @@
          WORKING-STORAGE SECTION.
          01 GREETING PIC A(10) VALUE 'WARO COBOL'.
          01 I PIC 9(2).
+         01 J PIC 9(2).
          01 X PIC 9(2).
          01 Y PIC 9(2).
          01 HIGH-BID PIC 9(2).
@@ -126,18 +127,17 @@
          END-IF.
   
        ASSIGN-CARD.
-         DIVIDE NUM-CARDS-HAND INTO I GIVING X REMAINDER Y.
-         IF Y = 0
-           MOVE 4 TO Y
-         END-IF.
+         COMPUTE J = I - 1.
+         DIVIDE NUM-CARDS-HAND INTO J GIVING X REMAINDER Y.
+         ADD 1 TO Y.
 
-         IF I >= 1 AND I <= 4
+         IF X = 0 
            MOVE DECK-CARDS (I) TO KITTY-CARDS (Y)
-         ELSE IF I >= 5 AND I <= 8
+         ELSE IF X = 1
            MOVE DECK-CARDS (I) TO PLAYER1-HAND (Y)
-         ELSE IF I >= 9 AND I <= 12
+         ELSE IF X = 2
            MOVE DECK-CARDS (I) TO PLAYER2-HAND (Y)
-         ELSE IF I >= 13 AND I <= 16
+         ELSE IF X = 3
            MOVE DECK-CARDS (I) TO PLAYER3-HAND (Y)
          ELSE
            DISPLAY "TRACER SEVERE ERROR I: " I
