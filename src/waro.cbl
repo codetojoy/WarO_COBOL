@@ -12,6 +12,9 @@
          01 IDX-GAME-WINNER PIC 9(1).
          78 NUM-CARDS-HAND VALUE 4.
          78 NUM-CARDS-DECK VALUE 16.
+         78 STRATEGY-NEXT VALUE 1.
+         78 STRATEGY-MAX VALUE 2.
+         78 STRATEGY-NEAREST VALUE 3.
 
          *> Players should probably be parallel arrays/tables:
          *> e.g. PLAYER-NAMES PIC X(6) OCCURS NUM-PLAYERS TIMES.
@@ -22,16 +25,19 @@
             02 PLAYER1-NAME PIC X(6) VALUE '  Bach'.      
             02 PLAYER1-BID PIC 9(2).
             02 PLAYER1-POINTS PIC 9(2).
+            02 PLAYER1-STRATEGY PIC 9(1) VALUE STRATEGY-NEXT.
             02 PLAYER1-HAND PIC 9(2) OCCURS NUM-CARDS-HAND TIMES.
          01 PLAYER2-REC.
             02 PLAYER2-NAME PIC X(6) VALUE 'Chopin'.      
             02 PLAYER2-BID PIC 9(2).
             02 PLAYER2-POINTS PIC 9(2).
+            02 PLAYER2-STRATEGY PIC 9(1) VALUE STRATEGY-MAX.
             02 PLAYER2-HAND PIC 9(2) OCCURS NUM-CARDS-HAND TIMES.
          01 PLAYER3-REC.
             02 PLAYER3-NAME PIC X(6) VALUE 'Mozart'.      
             02 PLAYER3-BID PIC 9(2).
             02 PLAYER3-POINTS PIC 9(2).
+            02 PLAYER3-STRATEGY PIC 9(1) VALUE STRATEGY-NEAREST.
             02 PLAYER3-HAND PIC 9(2) OCCURS NUM-CARDS-HAND TIMES.
          01 KITTY-REC.
             02 PRIZE-CARD PIC 9(2).

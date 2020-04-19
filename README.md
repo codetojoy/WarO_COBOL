@@ -7,9 +7,8 @@ WarO_COBOL
 * With the demand for COBOL during the pandemic, I thought it would be interesting to "kick the tires" a bit. (I took one semester of COBOL, centuries ago).
 * Caveat Emptor:
     - No unit tests. There are frameworks and it is painful to work without a harness, but I'm not that invested to configure a framework.
-    - Probably not idiomatic
+    - Probably not idiomatic, esp. with regard to data structures
     - Horribly hard-coded to 3 players; mortifyingly magic numbers
-    - Stupefyingly simple strategy (all players use 'next card')
 
 ### Viewing Code
 

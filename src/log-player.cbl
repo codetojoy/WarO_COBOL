@@ -11,11 +11,12 @@
           02 PLAYER-NAME PIC X(6).      
           02 PLAYER-BID PIC 9(2).
           02 PLAYER-POINTS PIC 9(2).
+          02 PLAYER-STRATEGY PIC 9(1).
           02 PLAYER-HAND PIC 9(2) OCCURS NUM-CARDS TIMES.
 
        PROCEDURE DIVISION USING PLAYER-REC.
           DISPLAY " "
-          DISPLAY "name: " PLAYER-NAME
+          DISPLAY "name: " PLAYER-NAME " (" PLAYER-STRATEGY ")"
           DISPLAY "bid: " PLAYER-BID
           DISPLAY "points: " PLAYER-POINTS
             
