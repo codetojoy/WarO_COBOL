@@ -2,7 +2,7 @@
 WarO_COBOL
 =========
 
-* a COBOL submission for War-O as a code exercise
+* a COBOL submission to [PEI Devs](https://github.com/peidevs/Resources/blob/master/Examples.md) for War-O as a code exercise
 * This is not a serious venture!
 * With the demand for COBOL during the pandemic, I thought it would be interesting to "kick the tires" a bit. (I took one semester of COBOL, centuries ago).
 * Caveat Emptor:
