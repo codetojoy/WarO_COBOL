@@ -6,10 +6,14 @@ WarO_COBOL
 * This is not a serious venture!
 * With the demand for COBOL during the pandemic, I thought it would be interesting to "kick the tires" a bit. (I took one semester of COBOL, centuries ago).
 * Note
-    - no unit tests (I know there are frameworks but I'm not that invested)
+    - no unit tests (I know there are frameworks but I'm not that invested to configure)
     - probably not idiomatic
     - horribly hard-coded to 3 players, mortifyingly magic numbers
     - stupefyingly simple strategy (all players use 'next card')
+
+### Viewing Code
+
+* The 'main' program is [here](./src/waro.cbl).
 
 ### Starting Docker
 
