@@ -65,6 +65,7 @@
          DISPLAY "TRACER Ready."
        STOP RUN.
 
+       *> Player with most points win the game.
        PICK-GAME-WINNER.
          MOVE PLAYER1-POINTS TO HIGH-POINTS.
          MOVE 1 TO IDX-GAME-WINNER.   
@@ -101,6 +102,7 @@
          CALL 'log-player' USING PLAYER2-REC.
          CALL 'log-player' USING PLAYER3-REC.
 
+       *> Winner gets the prize card points.
        AWARD-WINNER.
          IF IDX-ROUND-WINNER = 1
            ADD PRIZE-CARD TO PLAYER1-POINTS
@@ -112,6 +114,7 @@
            DISPLAY "TRACER SEVERE ERROR I-R-W: " IDX-ROUND-WINNER
          END-IF.
 
+       *> Player with highest bid wins the round.
        PICK-ROUND-WINNER.
          MOVE PLAYER1-BID TO HIGH-BID.
          MOVE 1 TO IDX-ROUND-WINNER.   
@@ -126,6 +129,11 @@
            MOVE 3 TO IDX-ROUND-WINNER  
          END-IF.
   
+       *> example values as I iterates:
+       *> I: 1 2 3 4 5 6 7 8 9 ...
+       *> J: 0 1 2 3 4 5 6 7 8 ...
+       *> X: 0 0 0 0 1 1 1 1 2 ...
+       *> Y: 1 2 3 4 1 2 3 4 1 ... 
        ASSIGN-CARD.
          COMPUTE J = I - 1.
          DIVIDE NUM-CARDS-HAND INTO J GIVING X REMAINDER Y.
